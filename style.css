@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Lexend+Deca:wght@100..900&display=swap");
+:root {
+  --Gold500: hsl(31, 77%, 52%);
+  --Cyan800: hsl(184, 100%, 22%);
+  --Green950: hsl(179, 100%, 13%);
+  /* (paragraphs) */
+  --Transparentwhite: hsla(0, 0%, 100%, 0.75);
+  /* (background, headings, buttons) */
+  --Gray100: hsl(0, 0%, 95%);
+}
+
+body {
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+  background: var(--Gray100);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 0 2rem;
+}
+
+#cars-type .row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#cars-type .row .col:first-child {
+  background-color: var(--Gold500);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#cars-type .row .col:nth-child(2) {
+  background-color: var(--Cyan800);
+}
+
+#cars-type .row .col:last-child {
+  background-color: var(--Green950);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#cars-type .row .col:first-child .btn {
+  color: var(--Gold500);
+}
+
+#cars-type .row .col:nth-child(2) .btn {
+  color: var(--Cyan800);
+}
+
+#cars-type .row .col:last-child .btn {
+  color: var(--Green950);
+}
+
+#cars-type .row .col {
+  padding: 45px;
+}
+
+#cars-type .row .col h2 {
+  font-size: 30px;
+  font-family: "Big Shoulders", sans-serif;
+  margin: 30px 0;
+  color: var(--Gray100);
+}
+
+#cars-type .row .col p {
+  margin-bottom: 6rem;
+  line-height: 1.6;
+  color: var(--Gray100);
+}
+
+#cars-type .row .col .btn {
+  background-color: var(--Gray100);
+  padding: 12px 25px;
+  border-radius: 20px;
+  text-decoration: none;
+  border: 1px solid var(--Gray100);
+}
+
+#cars-type .row .col .btn:hover {
+  background-color: var(--Transparentwhite);
+  color: var(--Gray100);
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .container {
+    padding: 5rem 2rem;
+  }
+
+  #cars-type .row {
+    grid-template-columns: 1fr;
+  }
+
+  #cars-type .row .col:first-child {
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 10px;
+  }
+
+  #cars-type .row .col:last-child {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+  }
+}
